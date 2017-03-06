@@ -25,6 +25,7 @@ function deploy {
 		    alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 		else
 			echo "Seems like we can not solve this problem right now :/"
+    fi;
 }
 
 deploy

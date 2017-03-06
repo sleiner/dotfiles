@@ -336,7 +336,16 @@ fi
 ## END OF FILE #################################################################
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-fortune | cowsay -n
-echo
+
+if (( $+commands[cowsay] ))
+    then
+        if (( $+commands[fortune] ))
+            then
+                fortune | cowsay -n
+            else
+                cowthink You should really install fortune...
+        fi
+        echo
+fi
 
 cd ~
